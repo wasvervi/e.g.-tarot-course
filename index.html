@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tarot Course</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Georgia", serif;
+        background-color: #f9f7ff;
+        color: #2d0033;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      .hero {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        overflow: hidden;
+        background: linear-gradient(135deg, #e5d4ff, #f9f7ff);
+      }
+
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: radial-gradient(circle, #d3b9ff 0%, #ffffff 60%);
+        z-index: 0;
+        animation: float 20s infinite ease-in-out;
+      }
+
+      .hero::before {
+        width: 400px;
+        height: 400px;
+        top: -100px;
+        left: -100px;
+      }
+
+      .hero::after {
+        width: 500px;
+        height: 500px;
+        bottom: -120px;
+        right: -150px;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(20px);
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: #5e2a84;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 0.8em 2em;
+        background-color: #a86ee6;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+        font-size: 1.1rem;
+      }
+
+      .cta-button:hover {
+        background-color: #c49aff;
+      }
+
+      .section {
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .section.dark {
+        background-color: #f3ebff;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        font-size: 1.1rem;
+      }
+
+      blockquote {
+        font-style: italic;
+        margin: 20px auto;
+        max-width: 600px;
+      }
+
+      .email-form {
+        margin-top: 20px;
+      }
+
+      .email-form input,
+      .email-form textarea {
+        padding: 0.8em;
+        width: 250px;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+
+      .email-form textarea {
+        width: 100%;
+        height: 100px;
+      }
+
+      .email-form button {
+        padding: 0.8em 1.5em;
+        background-color: #a86ee6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .email-form button:hover {
+        background-color: #c49aff;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .cta-button {
+          padding: 0.6em 1.5em;
+          font-size: 1rem;
+        }
+
+        .hero::before,
+        .hero::after {
+          width: 300px;
+          height: 300px;
+        }
+
+        .email-form input,
+        .email-form textarea {
+          width: 100%;
+        }
+
+        .email-form button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Unlock the Mysteries of Tarot</h1>
+        <p>Join our magical course and transform your life</p>
+        <a href="#course" class="cta-button">Explore the Course</a>
+        <a href="#purchase" class="cta-button pay-button">Buy the Course</a>
+      </div>
+    </header>
+
+    <section id="about" class="section white cards-pattern">
+      <h2>About the Course</h2>
+      <p>
+        This Tarot course guides you from beginner to advanced, helping
+        youmaster the arcana and intuition.
+      </p>
+    </section>
+
+    <section id="curriculum" class="section purple stars-circles">
+      <h2>What You'll Learn</h2>
+      <ul>
+        <li>Major & Minor Arcana meanings</li>
+        <li>How to do readings</li>
+        <li>Spreads for love, career, and purpose</li>
+        <li>Boosting your intuition</li>
+      </ul>
+    </section>
+
+    <section id="testimonials" class="section white cards-pattern">
+      <h2>What Our Students Say</h2>
+      <blockquote>
+        “This course changed my spiritual path forever!” – Luna M.
+      </blockquote>
+      <blockquote>
+        “Highly recommended for anyone wanting to understand Tarot deeply.” –
+        Alex R.
+      </blockquote>
+    </section>
+
+    <section class="section purple stars-circles">
+      <h2>Ready to Begin?</h2>
+      <p>Enroll now and start your journey into the Tarot.</p>
+      <a
+        href="https://t.me/taroen"
+        class="cta-button"
+        target="_blank"
+        rel="noopener"
+        >Join Telegram Channel</a
+      >
+    </section>
+
+    <section id="course" class="section white cards-pattern">
+      <h2>Ask a Question</h2>
+      <form
+        action="https://formspree.io/f/yourcode"
+        method="POST"
+        class="email-form"
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="text" name="surname" placeholder="Your Surname" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea
+          name="question"
+          placeholder="Type your question..."
+          required
+        ></textarea>
+        <button type="submit">Send Question</button>
+      </form>
+    </section>
+
+    <!-- 💰 PayPal Section -->
+    <section id="purchase" class="section purple stars-circles">
+      <h2>Get Full Access — 75% OFF</h2>
+      <p>
+        Original price: <s>$150</s> — Now only <strong>$50</strong> for a
+        limited time!
+      </p>
+      <div style="text-align: center; margin-top: 20px">
+        <a
+          href="https://www.paypal.com/invoice/payerView/details/INV2-WCSZ-KXCU-SYX4-2TPC?PDFqr=true"
+          target="_blank"
+          rel="noopener"
+          class="cta-button"
+          style="padding: 1em 2em; font-size: 1.1rem"
+        >
+          Buy Now for $50
+        </a>
+        <p style="font-size: 14px; color: #eee; margin-top: 10px">
+          Secure payment via PayPal. Instant access after purchase.
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
